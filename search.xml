@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>multisim仿真：三种波形产生+放大电路</title>
+      <link href="posts/dianlu.html"/>
+      <url>posts/dianlu.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这个神奇的实验，应该是大多数模电学生都逃不了的吧 😒😒😒</p><p>实验思路倒也挺简单粗暴，输入一个交流电，通过<code>比较器</code>和<code>积分电路</code>，依次产生<code>三角波</code>，<code>方波</code>，<code>正弦波</code>，然后输出到示波器上。然后再挑选一个进行放大，本渣挑的是<code>正弦波</code>，经过两个<code>NPN三极管</code>组成的共射放大电路进行放大，输出到示波器即可，整体思路还是不难的。</p><p>仿真做出来还行，实际上手实战就又是另一回事了。。别看是个简单的插面包板，实际做起来各种BUG简直蛋都疼了。。</p><p>至于失真问题，毕竟还要考虑到成本，不能上太好的材料，凑合应付就完事啦哈哈o(<em>￣▽￣</em>)ブ</p><h1 id="电路概览"><a href="#电路概览" class="headerlink" title="电路概览"></a>电路概览</h1><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/dianlugaoqing1.png"></p><h1 id="输出波形预览"><a href="#输出波形预览" class="headerlink" title="输出波形预览"></a>输出波形预览</h1><p><strong>XCS1 :</strong></p><p>此示波器显示的波形从上至下分别是：</p><ul><li>三角波</li><li>方波</li><li>正弦波</li></ul><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/boxing1.gif" alt="三种波形产生"></p><p><strong>XCS2 ：</strong></p><p>此示波器显示的是正弦波的放大波形。</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/fangda1.gif" alt="正弦波的放大波形"></p><h1 id="部分重要原件的作用"><a href="#部分重要原件的作用" class="headerlink" title="部分重要原件的作用"></a>部分重要原件的作用</h1><h2 id="运算放大器"><a href="#运算放大器" class="headerlink" title="运算放大器"></a>运算放大器</h2><p>741运放是个相当常用的运放器了，拥有反相和非反相两个输出端，由输入端输入欲被放大的电流或电压信号，经放大后由输出端输出。<strong>放大器作动时的最大特点为需要一对同样大小的正负电源</strong>，其值由±12Vdc至±18Vdc不等，一般使用±15Vdc的电压，我做仿真和实验的时候用的是±12Vdc。</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/4758093_3.jpg" alt="实物图"></p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/4758093_4.jpg" alt="引脚图"></p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/4758093_1.jpg" alt="运算放大器内部等值电路图"></p><p>具体连接方式可参考我的仿真电路图。</p><p>为啥要选这款运放呢，当然是因为他便宜又好买啊！ <del>（就是比较容易烧了）</del></p><h2 id="二极管"><a href="#二极管" class="headerlink" title="二极管"></a>二极管</h2><p>2N2222 / 2N2222A 是一小功率<code>NPN</code>三极管。</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/20210302233833.png" alt="外形"></p><table><thead><tr><th><strong>参数 管脚</strong></th><th><strong>符号</strong></th><th>2N2222</th><th>2N2222A</th><th><strong>单位</strong></th></tr></thead><tbody><tr><td>集电极-发射极电压</td><td>VCEO</td><td>30</td><td>40</td><td>V</td></tr><tr><td>集电极-基极电压</td><td>VCBO</td><td>60</td><td>75</td><td>V</td></tr><tr><td>发射极-基极电压</td><td>VEBO</td><td>5</td><td>6</td><td>V</td></tr><tr><td>集电极电流-连续</td><td>Ic</td><td>600</td><td>600</td><td>mA</td></tr><tr><td>器件耗散  @ TA = 25℃</td><td>PD</td><td>625</td><td>625</td><td>mW</td></tr><tr><td>操作和存储结温范围</td><td>TJ,Tstg</td><td>–55 to +150</td><td>–55 to +150</td><td>℃</td></tr></tbody></table><p>最重要是很便宜 而且挺稳定的。</p><h2 id="电容"><a href="#电容" class="headerlink" title="电容"></a>电容</h2><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/dianrong11.png" alt="电容"></p><ul><li>C1：  阻容耦合产生电路与放大电路</li><li>C2：  积分反馈电容，产生方波</li><li>C3 &amp; C4 :   积分电路，产生正弦波</li><li>C5：  阻容耦合两个共射放大电路</li><li>C6：  防止失真<strong>（此电容过低会显著失真）</strong></li><li>C7：  控制放大倍数，平衡失真</li></ul><p>电容值仅具有一定的参考意义，这也是凑合着调出来的，真正做实验的时候可以根据现有材料适当调整。</p><h2 id="电位器"><a href="#电位器" class="headerlink" title="电位器"></a>电位器</h2><p>比较重要的电阻用电位器代替，方便大家调试和观察电路变化。</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/dianweiqi.png" alt="电位器"></p><ul><li>R21：  控制三波形产生电路<strong>输出幅度</strong></li><li>R22：  控制三波形产生电路<strong>输出频率</strong></li><li>R23：  控制正弦波放大电路<strong>输出幅度</strong></li></ul><p>至于其他的电阻作用有兴趣的可以自行了解，大多数都是用于分压，电阻值也是随便凑得，能用就行，实际上手操作的时候可以根据手头有的材料自行调整。</p><h1 id="仿真文件"><a href="#仿真文件" class="headerlink" title="仿真文件"></a>仿真文件</h1><p>本渣用的是<code>multisim 14.0</code>，如果你的版本过低打开我的文件可能会出BUG。</p><p>希望能帮助到跟我一样苦逼工科狗们，或许我的学弟学妹们需要呢o(<em>￣▽￣</em>)ブ</p><div class="btn-center"><a class="btn-beautify button--animated outline blue larger" href="https://wwa.lanzous.com/iMRrZmeb3fa" title="下载链接"><i class="far fa-hand-point-right fa-fw"></i><span>下载链接</span></a>** 解压密码：techfens.com **</div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享t </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考试 </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 电路仿真 </tag>
+            
+            <tag> 电子技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【高数叔+猴博士+高斯课堂+斐多课堂】大学不挂科速成课全系列视频</title>
       <link href="posts/buguake.html"/>
       <url>posts/buguake.html</url>
@@ -38,7 +69,7 @@
       
       <categories>
           
-          <category> 技术教程 </category>
+          <category> 技术分享 </category>
           
       </categories>
       

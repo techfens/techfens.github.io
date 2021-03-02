@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://techfens.com/posts/dianlu.html</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/kexueshangwang.html</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://techfens.com/posts/buguake.html</loc>
     
     <lastmod>2021-03-01</lastmod>
@@ -10,13 +24,6 @@
   
   <url>
     <loc>https://techfens.com/about/index.html</loc>
-    
-    <lastmod>2021-03-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/kexueshangwang.html</loc>
     
     <lastmod>2021-03-01</lastmod>
     
@@ -53,7 +60,7 @@
 
   <url>
     <loc>https://techfens.com/</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,21 +68,42 @@
   
   <url>
     <loc>https://techfens.com/tags/%E8%80%83%E8%AF%95/</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/tags/%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F/</loc>
+    <lastmod>2021-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/tags/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://techfens.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://techfens.com/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -84,14 +112,21 @@
   
   <url>
     <loc>https://techfens.com/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</loc>
-    <lastmod>2021-03-01</lastmod>
+    <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://techfens.com/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-03-01</lastmod>
+    <loc>https://techfens.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%ABt/</loc>
+    <lastmod>2021-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
+    <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
