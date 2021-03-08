@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码</title>
+      <link href="posts/zuhaophp.html"/>
+      <url>posts/zuhaophp.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本人正在学PHP，恰逢同学想搭建一个租号平台，于是我就试着在网上花钱买了一份账号交易平台的源码练练手，你别说，还挺贵，找来找去都在几十块钱上下，也有卖几百块，甚至上万的</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210308112938805.png"></p><p>看着效果挺不错，打算整个来学习一下，于是想办法搞了一套回来，下面是我搭建好的预览图</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210308113131089.png" alt="主页"></p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210308113154332.png" alt="商品页"></p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210308113813515.png" alt="后台界面1"></p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210308113912316.png" alt="后台界面2">这给我的感觉就有点像是某发卡网改过来的，然后支付对接的是易支付，短信对接阿里云，功能不多但是也勉强能看，整个源码只有3.2MB大小。</p><p>是不是看着还行，<strong>你高兴太早了！</strong></p><h1 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 其他资料 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 源码 </tag>
+            
+            <tag> PHP </tag>
+            
+            <tag> 交易系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>multisim仿真：三种波形产生+放大电路</title>
       <link href="posts/dianlu.html"/>
       <url>posts/dianlu.html</url>
