@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Hexo踩坑：文件推送到Github出现的几个BUG</title>
+      <link href="posts/hexobug.html"/>
+      <url>posts/hexobug.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>用<code>Hexo</code>框架搭建自己的网站确实很香，毕竟是一个静态的网站，不仅响应速度很快，而且免去了服务器高昂的维护费用，可以以最低的成本搭建起一个很好的个人网站，且至今仍有众多大佬为其维护。</p><p>但由于毕竟是静态的框架，搭建复杂，容易出BUG，经常在推送博客文件到远端（本渣用的是Github托管文件）的时候出问题。</p><p>下面我就分享一些我在推送过程中遇到的问题。</p><h1 id="SSL-ERROR-Time-Out"><a href="#SSL-ERROR-Time-Out" class="headerlink" title="SSL ERROR / Time Out"></a>SSL ERROR / Time Out</h1><p>大致报错如图</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210317103951997.png" alt="image-20210317103951997"></p><p>说到底就是无法链接到<code>github</code>的服务器。一般用到的<code>github</code>的服务器有两个，一个是<code>SSL</code>，一个是<code>HTTP</code>。</p><p><strong>解决方法：修改HOST文件</strong></p><p>host文件位于电脑本地路径：<code>C:\Windows\System32\Drivers\etc</code></p><p>首先访问以下地址获取<code>github</code>服务器的IP地址：</p><p><a href="http://github.com.ipaddress.com/">http://github.com.ipaddress.com/</a></p><p><a href="http://github.global.ssl.fastly.net.ipaddress.com/">http://github.global.ssl.fastly.net.ipaddress.com/</a> </p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210317104647299.png" alt="image-20210317104647299"></p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210317104716081.png" alt="image-20210317104716081"></p><p>然后在你的Host文件内添加下面三行代码：</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line">140.82.114.3 github.com </span><br><span class="line">199.232.69.194 github.global.ssl.fastly.net</span><br></pre></td></tr></tbody></table></figure><p>不同电脑不同地域查询到的IP地址不一定是相同的，请根据自己查询到的IP地址自行更换。</p><h1 id="hexo-d命令推送无反应"><a href="#hexo-d命令推送无反应" class="headerlink" title="hexo d命令推送无反应"></a>hexo d命令推送无反应</h1><p>忘记截图了。大概的情况是：输入<code>hexo d</code>后，执行推送，可以看到有反应，但是并没有推上去，一直卡着。</p><p>这种情况据群里的大佬说，是推送插件出问题了。在bash内执行下面命令卸载原来的插件，并重新安装新的插件。</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 卸载之前的deployer插件:</span><br><span class="line">npm un hexo-deployer-git -save</span><br><span class="line"></span><br><span class="line"># 从master分支安装推送插件：</span><br><span class="line">npm i hexojs/hexo-deployer-git -save</span><br></pre></td></tr></tbody></table></figure><p>如果你是用<code>yarn</code>安装的话，也可以使用下面命令进行重装</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 卸载之前的deployer插件：</span><br><span class="line">yarn remove hexo-deployer-git</span><br><span class="line"></span><br><span class="line"># 从master分支安装推送插件：</span><br><span class="line">yarn add hexojs/hexo-deployer-git</span><br></pre></td></tr></tbody></table></figure><h1 id="Connect-Error"><a href="#Connect-Error" class="headerlink" title="Connect Error"></a>Connect Error</h1><p>涉及玄学的BUG，尝试着修改一下config文件，在博客文件根目录。</p><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/techfens/techfensimg/raw/master/img/image-20210317111735340.png" alt="image-20210317111735340"></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 把repo地址改为：</span><br><span class="line">https://你的Github用户名:你的GitHub密码@github.com/你的Github用户名/你的Github用户名.github.io.git</span><br><span class="line"></span><br><span class="line"># 例子：</span><br><span class="line">https://name:passwd@github.com/name/name.github.io.git</span><br></pre></td></tr></tbody></table></figure><div class="note warning simple"><p>请注意，如果你是最近新建的仓库，github的主分支自动分配为<code>main</code> 而不是<code>master</code>，请到自己的仓库上核实，并修改<code>config</code>文件中的<code>branch</code>为你的主分支。</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 踩坑日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码</title>
       <link href="posts/zuhaophp.html"/>
       <url>posts/zuhaophp.html</url>
