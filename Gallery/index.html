@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>相册 | TechFen's Blog</title><meta name="author" content="TechFens"><meta name="copyright" content="TechFens"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="图库">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>相册 | TechFen's Blog</title><meta name="author" content="TechFens"><meta name="copyright" content="TechFens"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="图库">
 <meta property="og:type" content="website">
 <meta property="og:title" content="相册">
 <meta property="og:url" content="https://techfens.com/Gallery/index.html">
@@ -7,10 +7,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images">
 <meta property="article:published_time" content="2021-03-05T14:23:55.000Z">
-<meta property="article:modified_time" content="2022-09-15T04:39:42.077Z">
+<meta property="article:modified_time" content="2022-10-04T06:49:39.352Z">
 <meta property="article:author" content="TechFens">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://techfens.com/Gallery/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<meta name="twitter:image" content="https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://techfens.com/Gallery/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?<meta name="baidu-site-verification" content="code-Kk1l97MfxO" />";
@@ -20,7 +20,7 @@
 </script><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: undefined,
   noticeOutdate: undefined,
   highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
@@ -45,26 +45,21 @@
   lightbox: 'fancybox',
   Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
   source: {
-    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
     justifiedGallery: {
-      js: 'https://fastly.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://fastly.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
     }
   },
   isPhotoFigcaption: false,
   islazyload: true,
-  isanchor: false
+  isAnchor: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '相册',
   isPost: false,
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-09-15 12:39:42'
+  postUpdate: '2022-10-04 14:49:39'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -146,12 +141,19 @@
           document.documentElement.classList.remove('hide-aside')
         }
       }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
     })(window)</script><meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="http://cdn.techfens.fun/img/20220320231057.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('http://cdn.techfens.fun/img/20210305135617.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">TechFen's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">相册</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><div class="gallery-group-main">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://git.techfens.com/techfens/img/raw/branch/main/20220320231057.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('http://git.techfens.com/techfens/img/raw/branch/main/20210305135617.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">TechFen's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">相册</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><div class="gallery-group-main">
 
   <figure class="gallery-group">
-  <img class="gallery-group-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="http://cdn.techfens.fun/img/IMG_20210305_093741a.jpg" alt="Group Image Gallery">
+  <img class="gallery-group-img no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://git.techfens.com/techfens/img/raw/branch/main/IMG_20210305_093741a.jpg" alt="Group Image Gallery">
   <figcaption>
   <div class="gallery-group-name">实习</div>
   <p>硬件狗</p>
@@ -163,10 +165,10 @@
 
 
 
-</div></div></main><footer id="footer" style="background-image: url('http://cdn.techfens.fun/img/20210305135617.png')"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2022 By TechFens</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://techfens.com">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://fastly.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+</div></div></main><footer id="footer" style="background-image: url('http://git.techfens.com/techfens/img/raw/branch/main/20210305135617.png')"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2022 By TechFens</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://techfens.com">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
-    getScript('https://fastly.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
       .then(() => {
         pangu.autoSpacingPage()
       })
@@ -207,13 +209,6 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
     return content
   }
 
-  const getIcon = (avatar,mail) => {
-    if (avatar) return avatar
-    let defaultIcon = '?d=robohash'
-    let iconUrl = `https://gravatar.loli.net/avatar/${mail + defaultIcon}`
-    return iconUrl
-  }
-
   const generateHtml = array => {
     let result = ''
 
@@ -227,7 +222,7 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
         }
 
         result += `<div class='content'>
-        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
         <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
         </div></div>`
       }
@@ -243,17 +238,17 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
 
   const getComment = () => {
     const loadWaline = () => {
-      Waline.Widget.RecentComments({
-        serverURL: 'https://pl.techfens.com',
+      Waline.RecentComments({
+        serverURL: 'https://web-waline.10248086.xyz',
         count: 6
-      }).then(res => {
-        const walineArray = res.comments.map(e => {
+      }).then(({comments}) => {
+        const walineArray = comments.map(e => {
           return {
             'content': changeContent(e.comment),
-            'avatar': getIcon(e.QQAvatar,e.mail),
+            'avatar': e.avatar,
             'nick': e.nick,
             'url': e.url + '#' + e.objectId,
-            'date': e.updatedAt,
+            'date': e.insertedAt,
           }
         })
         saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
@@ -265,7 +260,7 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
     }
 
     if (typeof Waline === 'function') loadWaline() 
-    else getScript('https://fastly.jsdelivr.net/npm/@waline/client/dist/Waline.min.js').then(loadWaline)
+    else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(loadWaline)
   }
 
   const newestCommentInit = () => {
@@ -281,22 +276,11 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
 
   newestCommentInit()
   document.addEventListener('pjax:complete', newestCommentInit)
-})</script><script defer="defer" id="ribbon" src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+})</script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = false;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
-</script><script src="https://fastly.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
-  'title',
-  '#config-diff',
-  '#body-wrap',
-  '#rightside-config-hide',
-  '#rightside-config-show',
-  '.js-pjax'
-]
-
-if (false) {
-  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
-}
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
 var pjax = new Pjax({
   elements: 'a:not([target="_blank"])',
@@ -308,10 +292,12 @@ var pjax = new Pjax({
 
 document.addEventListener('pjax:send', function () {
 
-  // removeEventListener toc scroll 
-  window.removeEventListener('scroll', window.tocScrollFn)
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
 
   typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
   
   if (window.aplayers) {
     for (let i = 0; i < window.aplayers.length; i++) {
@@ -327,6 +313,7 @@ document.addEventListener('pjax:send', function () {
   const $bodyClassList = document.body.classList
   $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
 
+  typeof disqusjs === 'object' && disqusjs.destroy()
 })
 
 document.addEventListener('pjax:complete', function () {
@@ -352,11 +339,6 @@ document.addEventListener('pjax:complete', function () {
   typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
   typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
-
-  // Analytics
-  if (false) {
-    MtaH5.pgv()
-  }
 
   // prismjs
   typeof Prism === 'object' && Prism.highlightAll()
