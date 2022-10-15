@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://techfens.com/posts/buguake.html</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://techfens.com/Gallery/index.html</loc>
     
     <lastmod>2022-10-04</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://techfens.com/Gallery/shixi/index.html</loc>
-    
-    <lastmod>2022-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/buguake.html</loc>
     
     <lastmod>2022-10-04</lastmod>
     
