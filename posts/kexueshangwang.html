@@ -321,12 +321,12 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
   function initWaline () {
     const waline = Waline.init(Object.assign({
       el: '#waline-wrap',
-      serverURL: 'https://web-waline.amdyes.eu.org',
+      serverURL: 'https://webwaline.techfens.com',
       pageview: false,
       dark: 'html[data-theme="dark"]',
       path: window.location.pathname,
       comment: false,
-    }, {"placeholder":"终于修复了发表情乱码的bug了，如果可以的话，记得留下你的邮箱，这样可以快速收到回复哦！","pageSize":8,"lang":"zh-CN","requiredFields":["nick","mail"]}))
+    }, null))
   }
 
   if (typeof Waline === 'function') initWaline()
@@ -388,7 +388,7 @@ if ('Waline' === 'Waline' || !true) {
   const getComment = () => {
     const loadWaline = () => {
       Waline.RecentComments({
-        serverURL: 'https://web-waline.amdyes.eu.org',
+        serverURL: 'https://webwaline.techfens.com',
         count: 6
       }).then(({comments}) => {
         const walineArray = comments.map(e => {
