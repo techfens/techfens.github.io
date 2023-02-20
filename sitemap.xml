@@ -2,55 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://techfens.com/posts/esp32mqttcar.html</loc>
-    
-    <lastmod>2023-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/server_selection.html</loc>
-    
-    <lastmod>2023-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/xiaoyuanwang.html</loc>
-    
-    <lastmod>2023-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/hexobug.html</loc>
-    
-    <lastmod>2023-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/zuhaophp.html</loc>
-    
-    <lastmod>2023-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/dianlu.html</loc>
-    
-    <lastmod>2023-02-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://techfens.com/posts/kexueshangwang.html</loc>
-    
-    <lastmod>2023-02-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://techfens.com/posts/buguake.html</loc>
     
     <lastmod>2023-02-20</lastmod>
@@ -66,6 +17,55 @@
   
   <url>
     <loc>https://techfens.com/Gallery/shixi/index.html</loc>
+    
+    <lastmod>2023-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/esp32mqttcar.html</loc>
+    
+    <lastmod>2023-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/zuhaophp.html</loc>
+    
+    <lastmod>2023-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/xiaoyuanwang.html</loc>
+    
+    <lastmod>2023-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/dianlu.html</loc>
+    
+    <lastmod>2023-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/server_selection.html</loc>
+    
+    <lastmod>2023-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/hexobug.html</loc>
+    
+    <lastmod>2023-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://techfens.com/posts/kexueshangwang.html</loc>
     
     <lastmod>2023-02-20</lastmod>
     
