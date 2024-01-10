@@ -1,25 +1,17 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>TechFen's Blog</title><meta name="author" content="TechFens"><meta name="copyright" content="TechFens"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="TechFen&#39;s Blog">
-<meta property="og:url" content="https://techfens.com/index.html">
-<meta property="og:site_name" content="TechFen&#39;s Blog">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://techfens.cachefly.net/image/20220320231057.png">
-<meta property="article:author" content="TechFens">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://techfens.cachefly.net/image/20220320231057.png"><link rel="shortcut icon" href="https://techfens.cachefly.net/image/20220320231057.png"><link rel="canonical" href="https://techfens.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>TechFen's Blog</title><meta name="author" content="TechFens"><meta name="copyright" content="TechFens"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description"><link rel="shortcut icon" href="https://techfens.cachefly.net/image/20220320231057.png"><link rel="canonical" href="https://techfens.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?<meta name="baidu-site-verification" content="code-Kk1l97MfxO" />";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script><script>const GLOBAL_CONFIG = { 
+</script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -30,7 +22,7 @@
     post: false
   },
   runtime: '天',
-  date_suffix: {
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -39,86 +31,97 @@
   },
   copyright: {"limitCount":50,"languages":{"author":"作者: TechFens","link":"链接: ","source":"来源: TechFen's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
   lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
   islazyload: true,
-  isAnchor: false
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: 'TechFen\'s Blog',
   isPost: false,
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-09-17 20:48:13'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
+  postUpdate: '2024-01-10 20:58:22'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
       }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
         document.documentElement.setAttribute('data-theme', 'dark')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
         }
       }
-      win.activateLightMode = function () {
+      win.activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
@@ -126,9 +129,9 @@
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
         if (asideStatus === 'hide') {
@@ -138,24 +141,21 @@
         }
       }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
       }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.3.0">
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20220320231057.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://techfens.cachefly.net/image/bgimg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">TechFen's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">TechFen's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/buguake.html" title="大学考试速成课全系列视频分享，保你期末不挂科！"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/Jpdh4J.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大学考试速成课全系列视频分享，保你期末不挂科！"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/buguake.html" title="大学考试速成课全系列视频分享，保你期末不挂科！">大学考试速成课全系列视频分享，保你期末不挂科！</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-01T08:20:03.000Z" title="发表于 2021-03-01 16:20:03">2021-03-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">学习资料</a></span></div><div class="content">项目重构中重构完成之前请各位不要再发电了，给大伙磕头了！
-重构完成之前请各位不要再发电了，给大伙磕头了！
-重构完成之前请各位不要再发电了，给大伙磕头了!
-我现在什么也帮不了你，我人刚活过来，老项目代码都失效了，开源的Alist框架也不好使了，整个项目都需要重新自个写，数据库和消息中间件还没建好，课程资源还没更新，发电了我还要一个个联系退款，实在是划不来。
-如果您要是确实想请我喝一杯咖啡，不妨等项目重构完成之后再发电！
-如果您依然选择了发电，那么请务必留下您的联系方式（邮箱，扣扣，微信，电报，discord等等），确保我可以在爱发电私信以外的平台联系你！否则爱发电赞助周期一过，就无法发送私信了！
-目前没有可用的备用线路，过一两天尝试开一条出来。
-一些日程2023-08-31：正在联系六月份以来至今的所有发电用户。可能需要一个星期的时间。但是如果你看到这条消息，可以再发一封邮件到我的邮箱里（私信大概率是发不了的），不然我不能保证100%能联系上你。
-爱发电链接：https://afdian.net/@fenski
-2023-09-10：苹果秋季npi，要是不幸我被抽去驻场开发，那么半个月之 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/esp32mqttcar.html" title="3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/esp32topic.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/esp32mqttcar.html" title="3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！">3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-09T08:03:55.000Z" title="发表于 2022-11-09 16:03:55">2022-11-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">摸鱼成果展示一直摸鱼一直爽，直到有一天我发现我的课设离ddl就剩两天了，瞬间清醒了！
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20220320231057.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://techfens.cachefly.net/image/bgimg.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="TechFen's Blog"><span class="site-name">TechFen's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="http://pan.techfens.com"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 网盘</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fa fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">TechFen's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/buguake.html" title="大学考试速成课全系列视频分享，保你期末不挂科！"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/Jpdh4J.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大学考试速成课全系列视频分享，保你期末不挂科！"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/buguake.html" title="大学考试速成课全系列视频分享，保你期末不挂科！"><i class="fas fa-thumbtack sticky"></i>大学考试速成课全系列视频分享，保你期末不挂科！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-01T08:20:03.000Z" title="发表于 2021-03-01 16:20:03">2021-03-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">学习资料</a></span></div><div class="content">更新进度请关注 https://www.passfinal.com
+
+别骂了别骂了 真的干不过来。。打算领完年终就跑路，这个项目就可以活了。
+真别发电了，算我给你们磕头了，这让我有什么脸见你们。。中间还被封了一段时间，都不知道丢了多少消息，找都找不回那种。我最多事后拉清单给你们补个pro max ultra 至尊纪念版超级svip，那也没得用啊！这个学期算是完蛋了，我道歉的速度都要赶不上了，还有一堆邮件和私信没回复的。。
+7950x的杜甫买好了，各类云原生配套也差不多了，anycast也部署好了，目前在借vercel的免费额度躺平混一会，服务器先不开。不然又要被打烂，真不知道哪个小比崽子拿我当靶场，一打就是三年，你赢了
+上线慢主要是踩了坑，技术选型出了大问题，出了bug救不了一点，加上摊上黑厂经常007加班坐牢，直接倒闭了。这年头安卓开发真是跪着要饭的，我怎么就进了这行啊，深刻认识到什么是选择＞努力了。
+我是真不图各位的米，各位自行去找爱发电平台退款即可，或者等我活过来，再逐一退款。我也很想帮各位，但是我已经不是那个潇洒的可以天天被外卖敲门叫醒的大学牲了，以前缺米不缺时间，现在不缺米了 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/esp32mqttcar.html" title="3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/esp32topic.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/esp32mqttcar.html" title="3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！">3小时速通ESP32远程图传遥控车，基于MQTT纯4G实现！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-09T08:03:55.000Z" title="发表于 2022-11-09 16:03:55">2022-11-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">摸鱼成果展示一直摸鱼一直爽，直到有一天我发现我的课设离ddl就剩两天了，瞬间清醒了！
 半天买材料，半天撸代码，然后再花半天组装一下写个报告，哈哈哈还剩半天时间摸个鱼，优化代码那是不可能的，不如给我这个万年不更新的长草站灌点水好了！
 开题给的项目是造一个车，后来嘎嘎造出来之后老师认为太水不给过，必须得加个什么东西，然后就加了个口罩贩卖机在上面，本质上还是完全没区别。。。。
 这个项目更倾向于是一个想法，话不多说，先上个成品 （这就完全就不能算成品好吗！！！
@@ -177,7 +177,7 @@ Gitee  : https://gitee.com/techfens/esp32mqttcar
 能用就行，极致的省钱！！！
 会用就行，极速的开发！！！
 
-因此在硬件选择上，直接选择MC ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/server_selection.html" title="万字踩坑日记之：国内外个人云服务器挑选指南及避坑"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/asdasfsfsf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字踩坑日记之：国内外个人云服务器挑选指南及避坑"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/server_selection.html" title="万字踩坑日记之：国内外个人云服务器挑选指南及避坑">万字踩坑日记之：国内外个人云服务器挑选指南及避坑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-21T10:55:05.000Z" title="发表于 2021-09-21 18:55:05">2021-09-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/">服务器运维</a></span></div><div class="content">写在前面由于个人学习和工作的原因，折腾过不少服务器，既刷过各种矿渣路由器，也整炸掉过几千块钱的物理机，但目前来说，使用最多的还是由各大 IDC 厂商提供的云服务器。
+因此在硬件选择上，直接选择MC ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/server_selection.html" title="万字踩坑日记之：国内外个人云服务器挑选指南及避坑"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/asdasfsfsf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字踩坑日记之：国内外个人云服务器挑选指南及避坑"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/server_selection.html" title="万字踩坑日记之：国内外个人云服务器挑选指南及避坑">万字踩坑日记之：国内外个人云服务器挑选指南及避坑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-21T10:55:05.000Z" title="发表于 2021-09-21 18:55:05">2021-09-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/">服务器运维</a></span></div><div class="content">写在前面由于个人学习和工作的原因，折腾过不少服务器，既刷过各种矿渣路由器，也整炸掉过几千块钱的物理机，但目前来说，使用最多的还是由各大 IDC 厂商提供的云服务器。
 云服务器最大的优点在于稳定，由专业人员集中运维，但这也是致命的缺点之一，毕竟服务器的控制权都在别人手里，买的时候一不留神就经常踩坑，
 由于国情环境的特殊，国内与国外的云服务器生态差别相当大，因此本文部分内容会对其分开进行介绍。本文区别国内外服务器的原则是是否需要备案，港澳台乃我国一贯领土，勿杠！
 本文主要介绍的还是主要还是以 VPS（Virtual Private Server 虚拟专用服务器）有关的内容。像独服，FPGA，边缘计算等内容就不在本文中细说。
@@ -185,7 +185,7 @@ Gitee  : https://gitee.com/techfens/esp32mqttcar
 明确需求以下的选择都是作为个人或者小型团队的出发点分析的，并不适用于大型项目。
 说白了，只适用于性价比是第一位的选择。
 项目类型一台服务器可以做的事情非常多，性能嘛当然是越高越好，但是由于现实因素的影响（钱包），很难做到全都要。
-首先你要问问自己，你为什么需要一台服务器？你要拿服务器干 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/xiaoyuanwang.html" title="几种绕过校园网开热点限制的方法"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210524123758.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="几种绕过校园网开热点限制的方法"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/xiaoyuanwang.html" title="几种绕过校园网开热点限制的方法">几种绕过校园网开热点限制的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-05-21T11:52:40.000Z" title="发表于 2021-05-21 19:52:40">2021-05-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">前言校园网真是个神奇的东西，超高的网费带来的还是极差的体验，很多学校的校园网不仅设有仅仅1~2台登录设备限制，其客户端还各种千方百计阻拦你开热点，实在是令人痛不欲生。
+首先你要问问自己，你为什么需要一台服务器？你要拿服务器干 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/xiaoyuanwang.html" title="几种绕过校园网开热点限制的方法"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210524123758.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="几种绕过校园网开热点限制的方法"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/xiaoyuanwang.html" title="几种绕过校园网开热点限制的方法">几种绕过校园网开热点限制的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-05-21T11:52:40.000Z" title="发表于 2021-05-21 19:52:40">2021-05-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">前言校园网真是个神奇的东西，超高的网费带来的还是极差的体验，很多学校的校园网不仅设有仅仅1~2台登录设备限制，其客户端还各种千方百计阻拦你开热点，实在是令人痛不欲生。
 本up坐标广东某学校，目前的校园网新由电信代理，使用的客户端是广东天翼校园，是今年才刚刚换装全新的使用的，具有网页客户端双重验证，且同时在线设备数仅为1台，极其令人反胃，而且速度感人，晚上还断网，简直了。
 
 目前大部分所谓说可以过校园网的软件都是已经失效的，甚至已经变成广告流氓程序（比如猎豹wifi之类的），大家可以试试，但要做好防毒措施。
@@ -196,7 +196,7 @@ Gitee  : https://gitee.com/techfens/esp32mqttcar
 
 虚拟机程序
 用于虚拟机的系统镜像
-外置的无线网卡和驱动 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/hexobug.html" title="Hexo踩坑：文件推送到Github出现的几个BUG"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210317115033.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo踩坑：文件推送到Github出现的几个BUG"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/hexobug.html" title="Hexo踩坑：文件推送到Github出现的几个BUG">Hexo踩坑：文件推送到Github出现的几个BUG</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-17T02:23:03.000Z" title="发表于 2021-03-17 10:23:03">2021-03-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></span></div><div class="content">前言用Hexo框架搭建自己的网站确实很香，毕竟是一个静态的网站，不仅响应速度很快，而且免去了服务器高昂的维护费用，可以以最低的成本搭建起一个很好的个人网站，且至今仍有众多大佬为其维护。
+外置的无线网卡和驱动 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/hexobug.html" title="Hexo踩坑：文件推送到Github出现的几个BUG"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210317115033.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo踩坑：文件推送到Github出现的几个BUG"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/hexobug.html" title="Hexo踩坑：文件推送到Github出现的几个BUG">Hexo踩坑：文件推送到Github出现的几个BUG</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-17T02:23:03.000Z" title="发表于 2021-03-17 10:23:03">2021-03-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></span></div><div class="content">前言用Hexo框架搭建自己的网站确实很香，毕竟是一个静态的网站，不仅响应速度很快，而且免去了服务器高昂的维护费用，可以以最低的成本搭建起一个很好的个人网站，且至今仍有众多大佬为其维护。
 但由于毕竟是静态的框架，搭建复杂，容易出BUG，经常在推送博客文件到远端（本渣用的是Github托管文件）的时候出问题。
 下面我就分享一些我在推送过程中遇到的问题。
 SSL ERROR / Time Out大致报错如图
@@ -210,7 +210,7 @@ http://github.global.ssl.fastly.net.ipaddress.com/
 
 
 然后在你的Host文件内添加下面三行代码：
-123# github140.82.114.3 github.com 199.232.6 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/zuhaophp.html" title="一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210321213534.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/zuhaophp.html" title="一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码">一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-08T03:17:48.000Z" title="发表于 2021-03-08 11:17:48">2021-03-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96%E8%B5%84%E6%96%99/">其他资料</a></span></div><div class="content">页面展示本人正在学PHP，恰逢同学想搭建一个租号平台，于是我就试着在网上花钱买了一份账号交易平台的源码练练手，你别说，还挺贵，找来找去都在几十块钱上下，也有卖几百块，甚至上万的
+123# github140.82.114.3 github.com 199.232.6 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/zuhaophp.html" title="一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210321213534.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/zuhaophp.html" title="一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码">一套让人血压升高的王者荣耀代练/租号/账号交易/皮肤交易/系统源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-08T03:17:48.000Z" title="发表于 2021-03-08 11:17:48">2021-03-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96%E8%B5%84%E6%96%99/">其他资料</a></span></div><div class="content">页面展示本人正在学PHP，恰逢同学想搭建一个租号平台，于是我就试着在网上花钱买了一份账号交易平台的源码练练手，你别说，还挺贵，找来找去都在几十块钱上下，也有卖几百块，甚至上万的
 
 看着效果挺不错，打算整个来学习一下，于是想办法搞了一套回来，下面是我搭建好的预览图
 
@@ -234,7 +234,7 @@ http://github.global.ssl.fastly.net.ipaddress.com/
  解压密码：techfens.com 
 
 
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/dianlu.html" title="multisim仿真：三种波形产生+放大电路"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210303013831.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="multisim仿真：三种波形产生+放大电路"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/dianlu.html" title="multisim仿真：三种波形产生+放大电路">multisim仿真：三种波形产生+放大电路</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-02T17:00:48.000Z" title="发表于 2021-03-03 01:00:48">2021-03-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">前言这个神奇的实验，应该是大多数模电学生都逃不了的吧 😒😒😒
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/dianlu.html" title="multisim仿真：三种波形产生+放大电路"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210303013831.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="multisim仿真：三种波形产生+放大电路"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/dianlu.html" title="multisim仿真：三种波形产生+放大电路">multisim仿真：三种波形产生+放大电路</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-02T17:00:48.000Z" title="发表于 2021-03-03 01:00:48">2021-03-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">前言这个神奇的实验，应该是大多数模电学生都逃不了的吧 😒😒😒
 实验思路倒也挺简单粗暴，输入一个交流电，通过比较器和积分电路，依次产生三角波，方波，正弦波，然后输出到示波器上。然后再挑选一个进行放大，本渣挑的是正弦波，经过两个NPN三极管组成的共射放大电路进行放大，输出到示波器即可，整体思路还是不难的。
 仿真做出来还行，实际上手实战就又是另一回事了。。别看是个简单的插面包板，实际做起来各种BUG简直蛋都疼了。。
 至于失真问题，毕竟还要考虑到成本，不能上太好的材料，凑合应付就完事啦哈哈o(￣▽￣)ブ
@@ -254,7 +254,7 @@ XCS2 ：
 
 
 
-具体连接方式可参考我的仿 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/kexueshangwang.html" title="科学上网的主流协议大对比！这里面有你在使用的吗？"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210303015354.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="科学上网的主流协议大对比！这里面有你在使用的吗？"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/kexueshangwang.html" title="科学上网的主流协议大对比！这里面有你在使用的吗？">科学上网的主流协议大对比！这里面有你在使用的吗？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-12T07:12:34.000Z" title="发表于 2021-02-12 15:12:34">2021-02-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">叠个 BUFF ，本文章不涉及和讨论任何政治内容！
+具体连接方式可参考我的仿 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/kexueshangwang.html" title="科学上网的主流协议大对比！这里面有你在使用的吗？"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://techfens.cachefly.net/image/20210303015354.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="科学上网的主流协议大对比！这里面有你在使用的吗？"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/kexueshangwang.html" title="科学上网的主流协议大对比！这里面有你在使用的吗？">科学上网的主流协议大对比！这里面有你在使用的吗？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-12T07:12:34.000Z" title="发表于 2021-02-12 15:12:34">2021-02-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="content">叠个 BUFF ，本文章不涉及和讨论任何政治内容！
 
 
 本文不提供详细的搭建教程，仅对各协议进行分析！本人非专业人士，部分内容来自互联网，文章已不作更新，部分技术存在较大代差，仅供参考
@@ -281,7 +281,7 @@ XCS2 ：
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E8%B5%84%E6%96%99/"><span class="card-category-list-name">其他资料</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="card-category-list-name">博客</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"><span class="card-category-list-name">学习资料</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span class="card-category-list-name">技术分享</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/"><span class="card-category-list-name">服务器运维</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(153, 193, 109)">Hexo</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.15em; color: rgb(150, 7, 120)">博客</a><a href="/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/" style="font-size: 1.45em; color: rgb(123, 57, 117)">踩坑日记</a><a href="/tags/%E8%80%83%E8%AF%95/" style="font-size: 1.45em; color: rgb(104, 39, 171)">考试</a><a href="/tags/ESP32/" style="font-size: 1.15em; color: rgb(116, 186, 60)">ESP32</a><a href="/tags/MQTT/" style="font-size: 1.15em; color: rgb(136, 30, 43)">MQTT</a><a href="/tags/MCU%E5%BC%80%E5%8F%91/" style="font-size: 1.15em; color: rgb(12, 198, 56)">MCU开发</a><a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.15em; color: rgb(49, 72, 124)">科学上网</a><a href="/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" style="font-size: 1.45em; color: rgb(5, 98, 197)">网络技术</a><a href="/tags/%E6%BA%90%E7%A0%81/" style="font-size: 1.15em; color: rgb(115, 55, 83)">源码</a><a href="/tags/PHP/" style="font-size: 1.15em; color: rgb(129, 152, 84)">PHP</a><a href="/tags/%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/" style="font-size: 1.15em; color: rgb(104, 19, 183)">交易系统</a><a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.15em; color: rgb(144, 44, 88)">学习</a><a href="/tags/%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F/" style="font-size: 1.15em; color: rgb(153, 36, 119)">电路仿真</a><a href="/tags/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/" style="font-size: 1.15em; color: rgb(70, 52, 62)">电子技术</a><a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" style="font-size: 1.15em; color: rgb(82, 13, 63)">校园网</a><a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.15em; color: rgb(185, 144, 15)">服务器</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-04-09T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">32.6k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-09-17T12:48:13.090Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://techfens.cachefly.net/image/bgimg.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2023 By TechFens</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://techfens.com">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ESP32/" style="font-size: 1.15em; color: rgb(34, 67, 55)">ESP32</a><a href="/tags/MQTT/" style="font-size: 1.15em; color: rgb(134, 77, 83)">MQTT</a><a href="/tags/MCU%E5%BC%80%E5%8F%91/" style="font-size: 1.15em; color: rgb(179, 102, 74)">MCU开发</a><a href="/tags/%E8%80%83%E8%AF%95/" style="font-size: 1.45em; color: rgb(167, 24, 183)">考试</a><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(115, 162, 117)">Hexo</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.15em; color: rgb(9, 12, 45)">博客</a><a href="/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/" style="font-size: 1.45em; color: rgb(50, 193, 28)">踩坑日记</a><a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.15em; color: rgb(27, 43, 2)">科学上网</a><a href="/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" style="font-size: 1.45em; color: rgb(190, 161, 88)">网络技术</a><a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.15em; color: rgb(79, 115, 33)">服务器</a><a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" style="font-size: 1.15em; color: rgb(94, 178, 196)">校园网</a><a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.15em; color: rgb(49, 60, 64)">学习</a><a href="/tags/%E7%94%B5%E8%B7%AF%E4%BB%BF%E7%9C%9F/" style="font-size: 1.15em; color: rgb(163, 144, 38)">电路仿真</a><a href="/tags/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/" style="font-size: 1.15em; color: rgb(143, 84, 21)">电子技术</a><a href="/tags/%E6%BA%90%E7%A0%81/" style="font-size: 1.15em; color: rgb(128, 63, 171)">源码</a><a href="/tags/PHP/" style="font-size: 1.15em; color: rgb(85, 164, 155)">PHP</a><a href="/tags/%E4%BA%A4%E6%98%93%E7%B3%BB%E7%BB%9F/" style="font-size: 1.15em; color: rgb(191, 121, 143)">交易系统</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-04-09T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">31.3k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-10T12:58:22.759Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://techfens.cachefly.net/image/bgimg.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 By TechFens</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://techfens.com">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -299,41 +299,37 @@ function panguInit () {
   }
 }
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    window.typed = new Typed("#subtitle", {
-      strings: ["旁观者的姓名，是永远到不了比赛的计分榜上的。","且视他人之疑目如盏盏鬼火，大胆的去走你的夜路罢！","晓看天色暮看云，愿我如星君如月，夜夜流光相皎洁。","失去的痛苦是短暂的，得不到的痛苦才是持久的，人生之路，有失才有得。"],
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
       startDelay: 300,
       typeSpeed: 150,
       loop: true,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '旁观者的姓名，是永远到不了比赛的计分榜上的。'
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
   }
 }
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["旁观者的姓名，是永远到不了比赛的计分榜上的。","且视他人之疑目如盏盏鬼火，大胆的去走你的夜路罢！","晓看天色暮看云，愿我如星君如月，夜夜流光相皎洁。","失去的痛苦是短暂的，得不到的痛苦才是持久的，人生之路，有失才有得。"])
   } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+    document.getElementById("subtitle").textContent = "旁观者的姓名，是永远到不了比赛的计分榜上的。"
   }
-} else {
-  subtitleType()
-}</script></div><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
+}
+typedJSFn.run(subtitleType)</script></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
     if (content === '') return content
 
     content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
@@ -369,36 +365,31 @@ if (true) {
     }
 
     let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
+    $dom && ($dom.innerHTML= result)
     window.lazyLoadInstance && window.lazyLoadInstance.update()
     window.pjax && window.pjax.refresh($dom)
   }
 
-  const getComment = () => {
-    const loadWaline = () => {
-      Waline.RecentComments({
-        serverURL: 'https://webwaline.techfens.com',
-        count: 6
-      }).then(({comments}) => {
-        const walineArray = comments.map(e => {
-          return {
-            'content': changeContent(e.comment),
-            'avatar': e.avatar,
-            'nick': e.nick,
-            'url': e.url + '#' + e.objectId,
-            'date': e.insertedAt,
-          }
-        })
-        saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
-        generateHtml(walineArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      }) 
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://webwaline.techfens.com/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "无法获取评论，请确认相关配置是否正确"
     }
-
-    if (typeof Waline === 'function') loadWaline() 
-    else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(loadWaline)
   }
 
   const newestCommentInit = () => {
@@ -430,12 +421,11 @@ var pjax = new Pjax({
 
 document.addEventListener('pjax:send', function () {
 
-  // removeEventListener scroll 
-  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
-  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
 
-  typeof preloader === 'object' && preloader.initLoading()
-  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  document.getElementById('rightside').classList.remove('rightside-show')
   
   if (window.aplayers) {
     for (let i = 0; i < window.aplayers.length; i++) {
@@ -467,7 +457,6 @@ document.addEventListener('pjax:complete', function () {
 
   GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
 
-  typeof chatBtnFn === 'function' && chatBtnFn()
   typeof panguInit === 'function' && panguInit()
 
   // google analytics
@@ -480,12 +469,10 @@ document.addEventListener('pjax:complete', function () {
 
   // prismjs
   typeof Prism === 'object' && Prism.highlightAll()
-
-  typeof preloader === 'object' && preloader.endLoading()
 })
 
-document.addEventListener('pjax:error', (e) => {
+document.addEventListener('pjax:error', e => {
   if (e.request.status === 404) {
     pjax.loadUrl('/404.html')
   }
-})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
